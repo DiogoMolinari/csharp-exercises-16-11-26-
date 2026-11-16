@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="bankExercise/bankExercise.csproj" />
+  <Project Path="booksExercise/booksExercise.csproj" />
   <Project Path="carExercise/carExercise.csproj" />
   <Project Path="OOP/OOP.csproj" />
 </Solution>
