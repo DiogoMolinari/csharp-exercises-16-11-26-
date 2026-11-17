@@ -6,21 +6,21 @@
 
     public Book(string title, string author, int pages)
     {
-        this.Title = title;
-        this.Author = author;
-        this.Pages = pages;
+        Title = title;
+        Author = author;
+        Pages = pages;
     }
 
-    public void setTitle(string title)
+    public void SetTitle(string title)
     {
         Title = title;
     }
 
-    public void setAuthor(string author)
+    public void SetAuthor(string author)
     {
         Author = author;
     }
-    public void setPages(int pages)
+    public void SetPages(int pages)
     {
         Pages = pages;
     }
