@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="AccountsBankPOO/AccountsBankPOO.csproj" Id="1ebc1222-a0fa-46ee-b8db-60a352a5c5a7" />
   <Project Path="bankExercise/bankExercise.csproj" />
   <Project Path="booksExercise/booksExercise.csproj" />
   <Project Path="carExercise/carExercise.csproj" />
