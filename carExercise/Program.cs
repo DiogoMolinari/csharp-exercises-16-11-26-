@@ -1,8 +1,5 @@
 ﻿/*Exercício 1: Faça um programa que crie 4 objetos de carro onde tenha 
 marca/fabricante, modelo, ano de fabricação, ano de modelo e valor de venda. Grave esses carros em um vetor e faça a exibição do mesmo*/
-
-using Microsoft.VisualBasic.FileIO;
-
 car CarRegister()
 {
     Console.WriteLine("Informe o Fabricante: ");
