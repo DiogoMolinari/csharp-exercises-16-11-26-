@@ -2,5 +2,6 @@
   <Project Path="bankExercise/bankExercise.csproj" />
   <Project Path="booksExercise/booksExercise.csproj" />
   <Project Path="carExercise/carExercise.csproj" />
+  <Project Path="inheritance/inheritance.csproj" Id="7bb05c8e-c087-46a2-9bb2-a7b5528085f9" />
   <Project Path="OOP/OOP.csproj" />
 </Solution>
