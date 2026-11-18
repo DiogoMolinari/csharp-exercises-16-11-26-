@@ -39,10 +39,18 @@
     }
 
 
-    /*public void ToTransfer(double transferValue, string name)
+    public string ToTransfer(AccountBank destination, double transferValue)
     {
-        BankBalance -= transferValue;
-        Console.WriteLine($"A transferência para {name} no valor de {transferValue} foi efetuada com sucesso!");
-    }*/
+        string result = ToTakeOut(transferValue);
+
+        if (result == "Valor inválido" || result == "Saldo insuficiente")
+        {
+            return result;
+        }
+
+        destination.Deposit(transferValue);
+
+        return "Transferência realizada com sucesso!";
+    }
 
 }
