@@ -3,24 +3,46 @@
     public int NumberAccount { get; set; }
     public double BankBalance { get; set; }
 
-    public virtual void Deposit(double depositValue)
+    public virtual bool Deposit(double depositValue)
     {
-        BankBalance += depositValue;
-        Console.WriteLine($"O depósito foi efetuado com sucesso. Seu saldo atual é de {BankBalance} reais.");
+        if (depositValue > 0)
+        {
+            BankBalance += depositValue;
+            return true;
+        }
+        return false;
+
     }
-    public virtual void ToTakeOut(double takeOutValue)
+    public string ToTakeOut(double takeOutValue)
     {
-        BankBalance -= takeOutValue;
-        Console.WriteLine($"O saque foi efetuado com sucesso. Seu saldo atual é de {BankBalance} reais.");
+        if (takeOutValue <= 0)
+        {
+            return "Valor inválido";
+        }
+        else
+        {
+            if (takeOutValue > BankBalance)
+            {
+                return "Saldo insuficiente";
+            }
+            BankBalance -= takeOutValue;
+            return BankBalance.ToString();
+        }
+
+
     }
-    public virtual void ToTransfer(double transferValue, string name)
+
+
+    public string ToPay(double payValue)
+    {
+        return ToTakeOut(payValue);
+    }
+
+
+    /*public void ToTransfer(double transferValue, string name)
     {
         BankBalance -= transferValue;
         Console.WriteLine($"A transferência para {name} no valor de {transferValue} foi efetuada com sucesso!");
-    }
-    public virtual void ToPay(double payValue)
-    {
-        BankBalance -= payValue;
-        Console.WriteLine($"Sua conta, no valor de {payValue} foi paga com sucesso!");
-    }
+    }*/
+
 }
